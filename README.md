@@ -1,5 +1,5 @@
 ## NOTICE
-
+This repo may be redundant.  I made it immediately after receiving notification of the new Github organization.  (are we using this repo or the old one?)
 This repository contains the public FTC SDK for the Freight Frenzy (2022-2023) competition season.
 
 ## Welcome!
