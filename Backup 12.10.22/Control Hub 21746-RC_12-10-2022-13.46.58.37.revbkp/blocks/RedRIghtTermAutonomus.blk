@@ -1,0 +1,138 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="45" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="dcMotor_setProperty_Direction" id="U.%6%@#uz2q`ijdpze7t">
+<field name="IDENTIFIER">_2AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"2"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="1GwLJ@3P#M[!#O0Q|MxA">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="Xf]fz;!vPp3;)PjuFyTo">
+<field name="IDENTIFIER">_3AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"3"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="+`*}z%JHT1+7?@]=.v|y">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="dcMotor_setDualProperty_Number" id="s[U#EU]1]L/skt_-euG}">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">_0AsDcMotor</field>
+<field name="IDENTIFIER2">_1AsDcMotor</field>
+<data>{"IDENTIFIER1":"0","IDENTIFIER2":"1"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="HN%|axa^5{UT08^~rAQt">
+<field name="NUM">0.2</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="P0B2i*t}8RtuHH{N6f.g">
+<field name="NUM">0.2</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="OR;OywCxmJ/aoUpP6!;u">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">_2AsDcMotor</field>
+<field name="IDENTIFIER2">_3AsDcMotor</field>
+<data>{"IDENTIFIER1":"2","IDENTIFIER2":"3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="FcQJL[y5#ufS*NeMJ`q=">
+<field name="NUM">0.75</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="sWJmL;D8?)lp#vnam)0t">
+<field name="NUM">0.75</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="D.3ETzL{FMQqD,ALUjd}">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="tSi1%?06LIX+q#E9|odU">
+<field name="NUM">1900</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="M_9eG-E~K0)1lD%)t.60">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">_0AsDcMotor</field>
+<field name="IDENTIFIER2">_1AsDcMotor</field>
+<data>{"IDENTIFIER1":"0","IDENTIFIER2":"1"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="N`Ifx])G)p+-41bOK%dh">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="nvR^GQDt~DEIV/mrr$pn">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="(`/)yr_c-Thwqq{xc,s!">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">_2AsDcMotor</field>
+<field name="IDENTIFIER2">_3AsDcMotor</field>
+<data>{"IDENTIFIER1":"2","IDENTIFIER2":"3"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id=":8-@vt(Xc1PUt[:gTZqv">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="m=`~pR~%6nIY*-Xe#dQ3">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="}Q?5mbxSO8Di;i!__6[y">
+<value name="IF0">
+<block type="linearOpMode_opModeIsActive" id=")o%YFX/#9kvv^sgXr4~5"/>
+</value>
+<statement name="DO0">
+<block type="comment" id="(rU-p_T_/B|vExcs}liL">
+<field name="COMMENT">Put run blocks here.</field>
+<next>
+<block type="controls_whileUntil" id="^0Kagy/e+Ea{rbZPv2G6">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="e)cr{!2VIET83s,JWC.="/>
+</value>
+<statement name="DO">
+<block type="telemetry_update" id="exvivmft-pX$n!1,8Ea$"/>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="AUTONOMOUS" group="" /><Enabled value="true" /></Extra>

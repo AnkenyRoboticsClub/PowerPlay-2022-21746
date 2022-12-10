@@ -1,0 +1,180 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" editable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="32" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="comment" id="Lc#BFtj*NTB48YL;eBl.">
+<field name="COMMENT">Put initialization blocks here.</field>
+<next>
+<block type="dcMotor_setProperty_RunMode" id="jH.!sQ]9MAxsbrpaK?W@">
+<field name="IDENTIFIER">m1AsDcMotor</field>
+<field name="PROP">Mode</field>
+<data>{"IDENTIFIER":"m1"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_runMode" id="0CQn,6Kg-m,37}#7L:mI">
+<field name="RUN_MODE">RUN_WITHOUT_ENCODER</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="Roo]p7F!7u+YUybgaQT;">
+<field name="IDENTIFIER">m2AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"m2"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="h#p#IHN~=-,=CB,H(=w.">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="controls_if" id="}Q?5mbxSO8Di;i!__6[y">
+<value name="IF0">
+<block type="linearOpMode_opModeIsActive" id=")o%YFX/#9kvv^sgXr4~5"/>
+</value>
+<statement name="DO0">
+<block type="comment" id="(rU-p_T_/B|vExcs}liL">
+<field name="COMMENT">Put run blocks here.</field>
+<next>
+<block type="controls_whileUntil" id="^0Kagy/e+Ea{rbZPv2G6">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="e)cr{!2VIET83s,JWC.="/>
+</value>
+<statement name="DO">
+<block type="comment" id="Jh/;L$n@JuX8AQJDFCul">
+<field name="COMMENT">Put loop blocks here.</field>
+<next>
+<block type="dcMotor_setProperty_Number" id="LG`#P[F!0d2#pr%XUo][">
+<field name="IDENTIFIER">m1AsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"m1"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="u0mC^}9y@R5/7LZjt7fK">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="e+:lc(Y@S8tZ|(i{|88~">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<next>
+<block type="dcMotor_setProperty_Number" id="z;cc$gMOVpbMo:#uZ$VM">
+<field name="IDENTIFIER">m2AsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"m2"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="1$IaUw6MQ)92-x9JD;!K">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="tD|*#M.K/:qFhfg*E1oz">
+<field name="OP">ADD</field>
+<value name="A">
+<shadow type="math_number" id="~QgK+])1~b_25@6J+.#c">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="}y-D@gZlW{+Y#m9%qvYP">
+<field name="OP">DIVIDE</field>
+<value name="A">
+<shadow type="math_number" id="HFi^WD`$W2+YPM=^?z?7">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="8lpn;J9kPYMW-f5Um]U1">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="{^*vI0C4LjVE]`I#BP0;">
+<field name="NUM">2</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="!%3+M+XvZ.k%=Qqam04e">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="Kr,W*LX([/w_e]Tf)THy">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickY</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="dcMotor_setProperty_Number" id="$I-u-;l41bmn@Z_;7-qJ">
+<field name="IDENTIFIER">m3AsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"m3"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="dJ(ZWHoN9@BD~E8C;Tx5">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="8*__.uA!G,V6eCJ1W%5c">
+<field name="OP">ADD</field>
+<value name="A">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="`N@=Qh:Vwkq}XLl?K|Wi">
+<field name="OP">DIVIDE</field>
+<value name="A">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="pu:AHP}+dC]e^=sE/US:">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="v,`e]Ki#(JXPWwf|fO;:">
+<field name="NUM">-2</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="Gc[_/LP({]F|qM~hjT;A">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickY</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="telemetry_update" id="exvivmft-pX$n!1,8Ea$"/>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="TELEOP" group="" /><Enabled value="false" /></Extra>
